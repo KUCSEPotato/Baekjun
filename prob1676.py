@@ -31,7 +31,7 @@ def counter_zero(num):
 # Logic 1
     while res % 10 == 0:
         zero_count += 1
-        res //= 10
+        res //= 10 # 정수 나눗셈 안하면 런타임 에러 (Overflow Error) 발생
     
     print(zero_count)
 
