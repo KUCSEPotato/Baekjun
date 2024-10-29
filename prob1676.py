@@ -12,22 +12,41 @@
 # ---------------------------------------------------------------------------------------------------- #
 
 def counter_zero(num):
-    res = 1
-    zero_count = 0
-    index = 0
+    res = 1 # 팩토리얼 결과 값 저장
+    zero_count = 0 # 0의 갯수
+    # index = 0
+
+    # print(res) # debug point 1
 
     if num == 0 or num == 1:
         print("0")
+        return
     else:
         while (num >= 1):
             res *= num
             num -= 1
-        for i, 
-
-
         
-        print(zero_count)
+        # print(res) # debug point 2
+
+# Logic 1
+    while res % 10 == 0:
+        zero_count += 1
+        res //= 10
+    
+    print(zero_count)
 
 # main
 n = int(input())
 counter_zero(n)
+
+# Logic 2 
+# convert_int_to_string = str(res)
+
+        # for i in range(len(convert_int_to_string)):
+
+        #     # print(convert_int_to_string[-(i+1)]) # debug point 3
+
+        #     if convert_int_to_string[-(i+1)] == '0':
+        #         zero_count += 1
+        #     else:
+        #         break
