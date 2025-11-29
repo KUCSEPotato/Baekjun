@@ -14,24 +14,18 @@
 # 시간 제한 2초
 # ---------------------------------------------------------------------------------------------------- #
 
-def sorting(number_list):
+# 빠른 입출력을 위해서 sys.stdin, sys.stdout 사용
+import sys
+
+input = sys.stdin.readline 
+
+def main():
+    N = int(input())
+    nums = [int(input()) for _ in range(N)]
     
-    
+    nums.sort()  # O(N log N): 파이썬 내장 정렬 함수는 timsort
 
+    sys.stdout.write("\n".join(map(str, nums)))
 
-
-# main
-number = int(input())
-input_list = []
-
-for i in range(number):
-    temp_for_input = int(input())
-    input_list.append(input_list)
-
-
-
-# sorted_list = sorted(input_list)
-
-# for i in range(len(sorted_list)):
-#     print(sorted_list[i])
-
+if __name__ == "__main__":
+    main()
